@@ -71,5 +71,17 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+
+    "repositories": [ {
+        "type": "package",
+        "package": {
+            "name": "simonjenny/laravel-skeleton",
+            "source": {
+                "url": "https://github.com/simonjenny/laravel-skeleton.git",
+                "type": "git",
+                "reference": "main"
+              }
+         }
+    }],
 }
