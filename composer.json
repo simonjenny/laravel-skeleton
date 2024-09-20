@@ -1,7 +1,7 @@
 {
     "name": "simonjenny/laravel-skeleton",
     "type": "project",
-    "description": "A highly opinionated skeleton for Laravel projectsk.",
+    "description": "A highly opinionated skeleton for Laravel projects.",
     "keywords": ["laravel", "framework"],
     "license": "MIT",
     "require": {
@@ -53,7 +53,7 @@
             "@php artisan migrate --graceful --ansi",
             "@php artisan storage:link",
             "@php artisan lang:update",
-            "@npm install"
+            "npm install"
         ]
     },
     "extra": {
