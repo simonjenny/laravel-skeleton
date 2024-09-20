@@ -1,7 +1,7 @@
 {
     "name": "simonjenny/laravel-skeleton",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "A highly opinionated skeleton for Laravel projectsk.",
     "keywords": ["laravel", "framework"],
     "license": "MIT",
     "require": {
