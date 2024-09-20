@@ -10,3 +10,7 @@ This is a highly opinionated skeleton for Laravel projects. It includes the foll
 ### Added Packages
 
 Look at composer.json
+
+### Create new project
+
+composer create-project --prefer-dist "simonjenny/laravel-skeleton" <name>
