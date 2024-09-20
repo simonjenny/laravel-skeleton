@@ -1,6 +1,7 @@
 {
     "package": {
         "name": "simonjenny/laravel-skeleton",
+        "version": "dev",
         "source": {
           "url": "https://github.com/simonjenny/laravel-skeleton.git",
           "type": "git",
