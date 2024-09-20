@@ -13,4 +13,4 @@ Look at composer.json
 
 ### Create new project
 
-composer create-project --prefer-dist "simonjenny/laravel-skeleton" <name>
+composer create-project "simonjenny/laravel-skeleton" <name>
