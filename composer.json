@@ -53,7 +53,8 @@
             "@php artisan migrate --graceful --ansi",
             "@php artisan storage:link",
             "@php artisan lang:update",
-            "npm install"
+            "npm install",
+            "chmod -R 777 storage"
         ]
     },
     "extra": {
@@ -70,6 +71,6 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }
