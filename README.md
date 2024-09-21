@@ -19,3 +19,10 @@ Look at [composer.json](composer.json)
 ```bash
 composer create-project simonjenny/laravel-skeleton NAME
 ```
+
+### Create Filament Panel and User
+
+```bash
+php artisan filament:install --panels
+php artisan make:filament-user
+```
