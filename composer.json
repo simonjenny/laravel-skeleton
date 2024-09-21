@@ -54,7 +54,8 @@
             "@php artisan storage:link",
             "@php artisan lang:update",
             "npm install",
-            "chmod -R 777 storage"
+            "chmod -R 777 storage",
+            "echo '#An awesome project' > README.md"
         ]
     },
     "extra": {
