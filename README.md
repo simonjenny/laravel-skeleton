@@ -7,7 +7,7 @@ It includes the following:
 - Moved Routes
 - Removed Health Checks Routes
 - FrankenPHP [Dockerfile](Dockerfile) with [Caddyfile](Caddyfile)
-- Modified composer.json to install Nodejs Packages
+- Modified [composer.json](composer.json) to install Nodejs Packages
 - Modified [.gitignore](.gitignore)
 
 ### Added Packages
