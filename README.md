@@ -1,4 +1,4 @@
-# Opinionated Laravel Skeleon
+# Opinionated Laravel Skeleton
 
 ### A opinionated skeleton for Laravel projects based on my own preferences.
 
