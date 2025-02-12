@@ -1,3 +1,4 @@
+composer.lock
 /.phpunit.cache
 /node_modules
 /public/hot
@@ -18,6 +19,5 @@ yarn-error.log
 /.idea
 /.vscode
 /.zed
-composer.lock
 /draft.yaml
 /.blueprint
