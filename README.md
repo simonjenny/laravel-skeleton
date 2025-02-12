@@ -26,3 +26,8 @@ composer create-project simonjenny/laravel-skeleton NAME
 php artisan filament:install --panels
 php artisan make:filament-user
 ```
+
+### Update Languages
+```bash
+php artisan lang:update
+```
