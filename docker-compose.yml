@@ -1,0 +1,15 @@
+services:
+  www:
+    container_name: web
+    image: frankenphp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      8000:8000
+    entrypoint: php artisan octane:frankenphp
+    restart: unless-stopped
+    volumes:
+      - './:/app'
+      - './Caddyfile:/etc/caddy/Caddyfile'
+    tty: true

@@ -5,9 +5,7 @@ COPY ./Caddyfile  /etc/caddy/Caddyfile
 
 WORKDIR /app
 
-# RUN apk add
-
-RUN install-php-extensions @composer
+RUN install-php-extensions @composer pcntl
 
 RUN composer install \
     --ignore-platform-reqs \
@@ -18,3 +16,5 @@ RUN composer install \
     --no-scripts
 
 RUN php artisan storage:link
+
+ENTRYPOINT ["php", "artisan", "octane:frankenphp"]
