@@ -35,7 +35,7 @@ return [
         'QUEUE_CONNECTION',
         'CACHE_STORE',
         'CACHE_PREFIX',
-        'MEMCACHED_HOST'
+        'MEMCACHED_HOST',
     ],
 
     /* All keys in this array will not be copyied to .env.example */
