@@ -10,7 +10,12 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__.'/../app/Routes/console.php'
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        $middleware->trustProxies(at: '*');
+    })
+    ->withMiddleware(function (Middleware $middleware) {
+        $middleware->validateCsrfTokens(except: [
+           'livewire/*',
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
