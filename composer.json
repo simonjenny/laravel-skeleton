@@ -9,7 +9,6 @@
         "calebporzio/sushi": "^2.5",
         "filament/filament": "^3.2",
         "laravel/framework": "^11.9",
-        "laravel/octane": "^2.7",
         "laravel/tinker": "^2.9",
         "livewire/livewire": "^3.5"
     },
