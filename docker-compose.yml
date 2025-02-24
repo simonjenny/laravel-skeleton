@@ -1,15 +1,18 @@
 services:
-  www:
-    container_name: web
-    image: frankenphp
-    build:
-      context: .
-      dockerfile: Dockerfile
+  web:
+    container_name: yournamehere
+    build: https://${GITHUB_USERNAME}:${GITHUB_AUTH_TOKEN}@github.com
     ports:
-      8000:8000
-    entrypoint: php artisan octane:frankenphp
+      - 9000:8000
+    user: "1000:1000"
     restart: unless-stopped
     volumes:
-      - './:/app'
-      - './Caddyfile:/etc/caddy/Caddyfile'
+      - './logfiles:/app/storage/logs'
     tty: true
+    env_file:
+      - .env
+    networks:
+      - app-network
+networks:
+  app-network:
+    driver: bridge

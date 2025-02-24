@@ -4,7 +4,7 @@ COPY .  /app
 
 WORKDIR /app
 
-RUN install-php-extensions @composer pcntl
+RUN install-php-extensions @composer intl
 
 RUN composer install \
     --ignore-platform-reqs \
@@ -12,8 +12,22 @@ RUN composer install \
     --prefer-dist \
     --no-interaction \
     --no-progress \
-    --no-scripts
+    --no-scripts \
+    --no-suggest \
+    --no-dev
 
 RUN php artisan storage:link
 
-ENTRYPOINT ["php", "artisan", "octane:frankenphp"]
+ARG USER=${USER}
+
+RUN \
+    # Use "adduser -D ${USER}" for alpine based distros
+    adduser ${USER}; \
+    # Add additional capability to bind to port 80 and 443
+    setcap CAP_NET_BIND_SERVICE=+eip /usr/local/bin/frankenphp; \
+    # Give write access to /data/caddy and /config/caddy
+    chown -R ${USER}:${USER} /data/caddy && chown -R ${USER}:${USER} /config/caddy && chown -R ${USER}:${USER} /app
+
+USER ${USER}
+
+ENTRYPOINT ["php", "artisan", "serve", "--host", "0.0.0.0"]
