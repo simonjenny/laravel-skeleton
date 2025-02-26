@@ -8,7 +8,7 @@
         "php": "^8.3",
         "calebporzio/sushi": "^2.5",
         "filament/filament": "^3.2",
-        "laravel/framework": "^11.9",
+        "laravel/framework": "^12.0",
         "laravel/tinker": "^2.9",
         "livewire/livewire": "^3.5"
     },
@@ -22,7 +22,7 @@
         "laravel/pint": "^1.21",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.0",
-        "soloterm/solo": "^0.3.1",
+        "soloterm/solo": "^0.4",
         "spatie/laravel-web-tinker": "^1.9"
     },
     "autoload": {
