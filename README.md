@@ -20,6 +20,11 @@ Look at [composer.json](composer.json)
 composer create-project simonjenny/laravel-skeleton NAME
 ```
 
+### Create Database and Run Migrations
+```bash
+php artisan migrate
+```
+
 ### Create Filament Panel and User
 
 ```bash
