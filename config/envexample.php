@@ -36,6 +36,7 @@ return [
         'CACHE_STORE',
         'CACHE_PREFIX',
         'MEMCACHED_HOST',
+        'DB_CONNECTION'
     ],
 
     /* All keys in this array will not be copyied to .env.example */

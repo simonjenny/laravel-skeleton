@@ -1,6 +1,7 @@
 FROM dunglas/frankenphp:php8.3-alpine
 
-COPY .  /app
+COPY ./Caddyfile /etc/caddy/Caddyfile
+COPY . /app
 
 WORKDIR /app
 
@@ -30,4 +31,3 @@ RUN \
 
 USER ${USER}
 
-ENTRYPOINT ["php", "artisan", "serve", "--host", "0.0.0.0"]
