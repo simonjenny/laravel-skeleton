@@ -23,7 +23,7 @@ ARG USER=${USER}
 
 RUN \
     # Use "adduser -D ${USER}" for alpine based distros
-    adduser ${USER}; \
+    adduser -D ${USER}; \
     # Add additional capability to bind to port 80 and 443
     setcap CAP_NET_BIND_SERVICE=+eip /usr/local/bin/frankenphp; \
     # Give write access to /data/caddy and /config/caddy
