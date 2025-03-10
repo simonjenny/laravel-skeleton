@@ -47,12 +47,13 @@ return [
     */
     'commands' => [
 
-        'HTTP' => 'php artisan serve',
+        
         'Vite' => 'npm run dev',
         'Logs' => EnhancedTailCommand::file(storage_path('logs/laravel.log')),
 
         // Lazy commands do no automatically start when Solo starts.
         'Make' => new MakeCommand,
+        //'HTTP' => 'php artisan serve',
         'Pint' => Command::from('./vendor/bin/pint --ansi')->lazy(),
     ],
 
