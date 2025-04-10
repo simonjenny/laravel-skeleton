@@ -56,7 +56,7 @@
             "@php artisan lang:update",
             "npm install",
             "chmod -R 777 storage",
-            "echo '# An awesome project' > README.md"
+            "echo ${PWD##*/} > README.md"
         ]
     },
     "extra": {
