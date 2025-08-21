@@ -1,6 +1,6 @@
 FROM dunglas/frankenphp:php8.3-alpine
 
-COPY ./Caddyfile /etc/caddy/Caddyfile
+COPY ./Caddyfile /etc/frankenphp/Caddyfile
 COPY . /app
 
 WORKDIR /app
