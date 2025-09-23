@@ -36,3 +36,8 @@ php artisan make:filament-user
 ```bash
 php artisan lang:update
 ```
+
+### Install Laravel Boost
+```bash
+php artisan boost:install
+```
