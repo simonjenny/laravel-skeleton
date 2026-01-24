@@ -57,6 +57,7 @@
             "@php artisan lang:update",
             "npm install",
             "chmod -R 777 storage",
+            "rm packages.json",
             "echo ${PWD##*/} > README.md"
         ]
     },
