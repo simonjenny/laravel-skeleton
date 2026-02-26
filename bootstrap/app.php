@@ -8,7 +8,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
         web: __DIR__.'/../app/Routes/web.php',
         commands: __DIR__.'/../app/Routes/console.php',
-        health: '/up', 
+        health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->trustProxies(at: '*');
