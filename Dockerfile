@@ -1,22 +1,28 @@
 FROM dunglas/frankenphp:php8.4-alpine
 
 COPY ./Caddyfile /etc/frankenphp/Caddyfile
-COPY . /app
 
 WORKDIR /app
 
 RUN install-php-extensions @composer intl
 
+# Copy only dependency files first for better layer caching
+# This layer is only rebuilt when composer.json or composer.lock changes
+COPY composer.json composer.lock /app/
+
 RUN composer install \
-    --ignore-platform-reqs \
     --optimize-autoloader \
     --prefer-dist \
     --no-interaction \
     --no-progress \
     --no-scripts \
-    --no-suggest \
     --no-dev
 
+# Now copy the rest of the application
+COPY . /app
+
+# Run post-install steps that require the full app to be present
+RUN php artisan package:discover --ansi
 RUN php artisan storage:link
 
 ARG USER=${USER}
@@ -30,4 +36,3 @@ RUN \
     chown -R ${USER}:${USER} /data/caddy && chown -R ${USER}:${USER} /config/caddy && chown -R ${USER}:${USER} /app
 
 USER ${USER}
-

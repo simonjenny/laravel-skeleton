@@ -1,7 +1,10 @@
 services:
   web:
+    # TODO: Set the container name to your project name
     container_name: yournamehere
-    build: https://${GITHUB_USERNAME}:${GITHUB_AUTH_TOKEN}@github.com
+    # TODO: Update the image path to your GitHub repository, e.g. ghcr.io/simonjenny/yourproject:latest
+    # The image is built and pushed to GHCR automatically on each GitHub release (see .github/workflows/docker.yml)
+    image: ghcr.io/${GITHUB_USERNAME}/yourproject:latest
     ports:
       - 127.0.0.1:80:80
     user: "1000:1000"

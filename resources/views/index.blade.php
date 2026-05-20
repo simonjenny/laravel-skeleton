@@ -8,8 +8,7 @@
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-        <script src="https://www.trustlytics.ch.test/collect.js" defer></script>
-    </head>
+</head>
     <body class="font-sans antialiased dark:bg-black dark:text-white/50">
         <div class="h-screen flex items-center justify-center bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
 
